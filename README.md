@@ -111,6 +111,16 @@ Below are screenshots validating the deployed application functionality and user
 
 <img width="1887" height="1049" alt="Screenshot 2025-12-08 at 11 38 51 PM" src="https://github.com/user-attachments/assets/334a2bcd-3688-4aec-9154-b4f60a56034a" />
 
+<img width="1900" height="1058" alt="Screenshot 2025-12-08 at 11 40 08 PM" src="https://github.com/user-attachments/assets/94b8132d-9aad-478f-b14a-271b9f0aea43" />
+
+<img width="1872" height="1075" alt="Screenshot 2025-12-08 at 11 40 26 PM" src="https://github.com/user-attachments/assets/6d146643-f48a-4fe2-988f-35ee363afc3f" />
+
+<img width="1886" height="1006" alt="Screenshot 2025-12-08 at 11 41 05 PM" src="https://github.com/user-attachments/assets/bfff14b0-ff9c-45e4-add4-f0e078b37fe3" />
+
+<img width="1878" height="1044" alt="Screenshot 2025-12-08 at 11 41 19 PM" src="https://github.com/user-attachments/assets/1d17ea5b-0792-43b2-9b4c-216d99eff7db" />
+
+<img width="952" height="532" alt="Screenshot 2025-12-08 at 11 42 02 PM" src="https://github.com/user-attachments/assets/62130759-7f02-40ff-a5c0-50bdb32b19a5" />
+
 
 ## Improvements that can be done to this assignment
 1.  **Terraform Organization**: Organize the Terraform directory better by having reusable child modules and one main module in the root directory.

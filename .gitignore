@@ -1,6 +1,6 @@
-**.terraform.tfstate
-**.terraform.tfstate.backup
-**/.terraform
-**.vscode
-**/.terraform.lock.hcl
+.terraform.tfstate
+.terraform.tfstate.backup
+.terraform
+.vscode
+.terraform.lock.hcl
 .DS_Store

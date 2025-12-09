@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Values.mongo.name }}
+  namespace: {{.Values.global.namespace }}
+  labels:
+    app: {{.Values.mongo.name }}
+spec:
+  replicas: {{.Values.mongo.replicas }}
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: {{.Values.mongo.name }}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.mongo.name }}
+    spec:
+      securityContext:
+        fsGroup: 999 # Fixes permission issues on dynamic volumes
+        runAsUser: 999
+        runAsGroup: 999
+      containers:
+        - name: mongo
+          image: {{.Values.mongo.image }}
+          ports:
+            - containerPort: 27017
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              value: {{.Values.mongo.rootUser }}
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              value: {{.Values.mongo.rootPassword }}
+          volumeMounts:
+            - name: sl-mongo-pvc
+              mountPath: /data/db
+      volumes:
+        - name: sl-mongo-pvc
+          persistentVolumeClaim:
+            claimName: {{.Values.mongo.name }}-pvc

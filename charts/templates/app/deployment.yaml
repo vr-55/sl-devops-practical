@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Values.expressApp.name }}
+  namespace: {{.Values.global.namespace }}
+spec:
+  replicas: {{.Values.expressApp.replicas }}
+  selector:
+    matchLabels:
+      app: {{.Values.expressApp.name }}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.expressApp.name }}
+    spec:
+      containers:
+        - name: sl-express-app
+          image: {{.Values.expressApp.image }}
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGODB_URL
+              # connection string using the FQDN of the service
+              value: "mongodb://{{.Values.mongo.rootUser }}:{{.Values.mongo.rootPassword }}@{{.Values.mongo.name }}-svc.{{.Values.global.namespace }}.svc.cluster.local:27017/sldb?authSource=admin"
+            - name: NODE_ENV
+              # env value
+              value: "development"

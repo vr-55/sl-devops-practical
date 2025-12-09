@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Values.expressApp.name }}-svc
+  namespace: {{.Values.global.namespace }}
+spec:
+  type: {{.Values.expressApp.service.type }}
+  selector:
+    app: {{.Values.expressApp.name }}
+  ports:
+    - port: {{.Values.expressApp.service.port }}
+      targetPort: 3000
+      nodePort: {{.Values.expressApp.service.nodePort }}

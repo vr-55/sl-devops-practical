@@ -1,0 +1,6 @@
+project_id   = "sl-practical"
+region       = "us-central1"
+project_name = "SL-Practical"
+environment  = "test"
+vpc_name     = "sl-practical"
+subnet_cidr  = "10.0.1.0/24"

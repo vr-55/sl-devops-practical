@@ -1,0 +1,25 @@
+# values.yaml
+global:
+  namespace: "sl-practical"
+
+mongo:
+  name: "mongodb"
+  image: "mongo:latest"
+  replicas: 1
+  rootUser: "admin"
+  rootPassword: "password123" # dummy secret, just for test. don't do in prod
+  persistence:
+    enabled: true
+    storageClass: "local" # use cluster default, just for practical
+    size: 5Gi
+  service:
+    port: 27017
+
+expressApp:
+  name: "sl-blog"
+  image: "vr55/sl-devops-practical:latest" # Public docker hub image
+  replicas: 1
+  service:
+    type: NodePort
+    port: 3000
+    nodePort: 31000

@@ -1,0 +1,10 @@
+apiVersion: v2
+name: sl-practical-fullstack-app
+description: A Helm chart for a Node.js app with a standalone MongoDB backend
+type: application
+
+# Chart version
+version: 0.1.0
+
+# App version
+appVersion: "1.0.0"

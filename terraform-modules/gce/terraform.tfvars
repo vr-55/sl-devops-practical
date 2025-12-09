@@ -1,0 +1,14 @@
+project_id = "sl-practical"
+project_name = "SL-Practical"
+environment  = "test"
+region     = "us-central1"
+zone       = "us-central1-a"
+cluster_name = "sl-practical"
+controller_count = 1
+worker_count     = 2
+controller_instance_type = "e2-standard-4"
+worker_instance_type     = "e2-standard-4"
+image        = "projects/ubuntu-os-cloud/global/images/family/ubuntu-2204-lts"
+disk_size_gb = 250
+network    = "sl-practical"
+subnet = "sl-practical-subnet"

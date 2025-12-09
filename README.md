@@ -109,20 +109,8 @@
 ## Validation
 Below are screenshots validating the deployed application functionality and user flow.
 
-### 1. User Sign Up
-![Sign Up Page](Screenshot-2025-12-08-at-11.40.08-PM.jpg)
+<img width="1887" height="1049" alt="Screenshot 2025-12-08 at 11 38 51 PM" src="https://github.com/user-attachments/assets/334a2bcd-3688-4aec-9154-b4f60a56034a" />
 
-### 2. Home Page (Initial State)
-![No Articles](Screenshot-2025-12-08-at-11.38.51-PM.jpg)
-
-### 3. Creating an Article
-![Article Creation Success](Screenshot-2025-12-08-at-11.41.05-PM.jpg)
-
-### 4. Validating Created Content
-![Article View](Screenshot-2025-12-08-at-11.42.02-PM.jpg)
-
-### 5. User Profile
-![User Profile](Screenshot-2025-12-08-at-11.41.19-PM.jpg)
 
 ## Improvements that can be done to this assignment
 1.  **Terraform Organization**: Organize the Terraform directory better by having reusable child modules and one main module in the root directory.
